@@ -19,37 +19,11 @@ class Profile extends React.Component {
   }
 
   componentDidMount(){
-    /*
-    const notesDB = Firebase.database().ref(this.props.params.username).child('notes')
-
-    notesDB.once('value').then((snapshot) => {
-      let objectNotes = snapshot.val()
-      let arrayNotes = Object.keys(objectNotes).map((key) => {return objectNotes[key]})
-      this.setState({
-        notes: arrayNotes
-      })
-    })
-
-    notesDB.on('child_added', (snapshot) => {
-      this.setState({
-        notes: this.state.notes.concat(snapshot.val())
-      })
-    })
-
-    let axios = new ServicesAxios()
-    axios.getGithubInfo(this.props.params.username).then((data) => {
-      this.setState({
-        repos: data.repos,
-        bio: data.bio
-      })
-    })
-    */
     this.init(this.props.params.username)
   }
 
   componentWillReceiveProps(nextProps){
     this.init(nextProps.params.username)
-    console.log(nextProps.params.username)
   }
 
   init(username){

@@ -3,11 +3,11 @@ import Axios from 'axios'
 class ServicesAxios {
 
   getRepos(username){
-    return Axios.get('https://api.github.com/users/' + username + '/repos')
+    return Axios.get(`https://api.github.com/users/${username}/repos`)
   }
 
   getUserInfo(username){
-    return Axios.get('https://api.github.com/users/' + username)
+    return Axios.get(`https://api.github.com/users/${username}`)
   }
 
   getGithubInfo(username){
